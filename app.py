@@ -10,7 +10,7 @@ word_index = imdb.get_word_index()
 reverse_word_index = {value + 3: key for key, value in word_index.items()}
 
 # Load the model
-model = load_model('simple_rnn_imdb.h5')
+model = load_model('simple_RNN_imdb.h5')
 
 # Function to decode a review
 def decode_review(encoded_review):
@@ -45,5 +45,5 @@ if st.button('Classify'):
     st.write(f"Score: {prediction[0][0]}")
 else:
     st.write("Please enter a movie review and click 'Classify' to see the sentiment analysis.")
-    
+
 
